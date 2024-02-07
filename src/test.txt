@@ -1,0 +1,30 @@
+/*----test-----*/
+cd ~/workspace/tulasidasnayak68-ME_FE_BUILDOUT_XSTATES
+chmod +x run_assessment.sh
+./run_assessment.sh
+
+/*----------------------------------*/
+
+cd ~/workspace/tulasidasnayak68-ME_FE_BUILDOUT_XSTATES
+
+git add .
+
+git commit -m "ME_FE_BUILDOUT_XSTATES_MODULE_ONE"
+
+git push -u origin master
+
+
+# Ensure you have no pending commits
+
+git status
+
+/*-----------------------------------------------------------*/
+const fetchApi = async () =>{
+    try {
+      const res = await axios.get(`https://crio-location-selector.onrender.com/countries`);
+      console.log(res);
+      setCountries(res.data);
+    } catch (e) {
+      console.log("Error fetching data: ", e);
+    }
+  };
